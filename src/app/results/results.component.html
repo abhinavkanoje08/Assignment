@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+  <a class="navbar-brand" href="">Client Details</a>
+</nav>
+
+<div class="container">
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Client Id</th>
+        <th>Date of Birth</th>
+        <th>Full Name</th>
+        <th>CAddress</th>
+      </tr>
+
+
+    </thead>
+    <tbody>
+      <tr *ngFor="let client of clientList">
+        <td>{{client.Cid}}</td>
+        <td>{{client.Dob}}</td>
+        <td>{{client.FirstName}} {{ client.LastName}}</td>
+        <td *ngFor="let add of client.clientAdd">{{add.Address}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+</html>

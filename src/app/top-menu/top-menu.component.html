@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+<div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" routerLink="">DMI</a><br />
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" routerLink="/page1">Home <span class="sr-only">(current)</span></a>
+
+
+
+
+                <a class="nav-item nav-link active" routerLink="/page1">Admin <span class="sr-only">(current)</span></a>
+            </div>
+        </div>
+    </nav>
+</div>
+<br /><br />
+
+<div class="text-center">
+    <h1>Find an Existing client</h1>
+</div><br /><br />
+
+<form>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-2 col-md-2 col-sm-2 ">
+                <label for="">First Name</label>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 ">
+                <input type="text" name="FirstName" [(ngModel)]="clients.FirstName">
+            </div>
+
+
+            <div class="col-lg-2 col-md-2 col-sm-2 ">
+                <label for="">Last Name</label>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 ">
+                <input type="text" name="LastName" [(ngModel)]="clients.LastName">
+            </div>
+
+        </div>
+        <br /><br />
+
+        <div class="text-center">
+            <div class="row">
+                <div class="col-lg-11 col-md-11 col-sm-11 ">
+                    <input type="submit" value="submit" (click)="printResult()">
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<br /><br />
+
+<app-results [clientList]="clientList"></app-results>
+
+
+</html>
